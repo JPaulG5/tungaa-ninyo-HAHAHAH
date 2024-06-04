@@ -78,5 +78,5 @@
     </div>
 </main>
 
-<script type="module" src="../Views/assets/js/index.js"></script>
+<script type="module" src="../../Views/assets/js/index.js"></script>
 <?php require('partials/footer.php'); ?>

@@ -1,26 +1,28 @@
 let uri = new URL(window.location.href);
+const PATH = new URL(window.location.href).pathname.split("/")[1];
 
-if(uri['pathname'] == '/Spending-Tracker-Web-Application/index.php/edit')
+
+if(uri['pathname'] == `/${PATH}/index.php/edit`)
 {       
     document.querySelector("#form_edit button").addEventListener('click', e => {
         e.preventDefault();
-        window.location.href = "/Spending-Tracker-Web-Application/index.php/";
+        window.location.href = `/${PATH}/index.php/`;
     });
 }
 
-if(uri['pathname'] == '/Spending-Tracker-Web-Application/index.php/login')
+if(uri['pathname'] == `/${PATH}/index.php/login`)
 {
     document.querySelector("#login_link_reg").addEventListener('click', e => {
         e.preventDefault();
-        window.location.href = "/Spending-Tracker-Web-Application/index.php/registration";
+        window.location.href = `/${PATH}/index.php/registration`;
     });
 }
 
-if(uri['pathname'] == '/Spending-Tracker-Web-Application/index.php/registration')
+if(uri['pathname'] == `/${PATH}/index.php/registration`)
 {
     document.querySelector("#reg_link_login").addEventListener('click', e => {
         e.preventDefault();
-        window.location.href = "/Spending-Tracker-Web-Application/index.php/login";
+        window.location.href = `/${PATH}/index.php/login`;
     });
     
 }
