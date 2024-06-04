@@ -1,31 +1,26 @@
 let uri = new URL(window.location.href);
 
-let xampp_index = "/index.php";
-if(uri['port'] == "8080") xampp_index = "";
-
-let url = "/Spending-Tracker-Web-Application/" + xampp_index;
-
-if(uri['pathname'] == url + 'edit')
+if(uri['pathname'] == '/Spending-Tracker-Web-Application/index.php/edit')
 {       
-    document.querySelector("#form_edit type['button']").addEventListener('click', e => {
+    document.querySelector("#form_edit button").addEventListener('click', e => {
         e.preventDefault();
-        window.location.href = url + "";
+        window.location.href = "/Spending-Tracker-Web-Application/index.php/";
     });
 }
 
-if(uri['pathname'] ==  url + 'login')
+if(uri['pathname'] == '/Spending-Tracker-Web-Application/index.php/login')
 {
     document.querySelector("#login_link_reg").addEventListener('click', e => {
         e.preventDefault();
-        window.location.href = url + "registration";
+        window.location.href = "/Spending-Tracker-Web-Application/index.php/registration";
     });
 }
 
-if(uri['pathname'] ==  url + 'registration')
+if(uri['pathname'] == '/Spending-Tracker-Web-Application/index.php/registration')
 {
     document.querySelector("#reg_link_login").addEventListener('click', e => {
         e.preventDefault();
-        window.location.href = url + "login";
+        window.location.href = "/Spending-Tracker-Web-Application/index.php/login";
     });
     
 }

@@ -1,6 +1,5 @@
 <?php
-
-$xammp = "/Spending-Tracker-Web-Application" . $xampp_index;
+$xammp = "/{$file}/index.php";
 
 
 $router->get($xammp.'/', 'home/index.php');
